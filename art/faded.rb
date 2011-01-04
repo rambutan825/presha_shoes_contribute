@@ -4,7 +4,6 @@
 #
 Shoes.app :width => 600, :height => 600 do
   nostroke
-  draw_circle(self, 0.9, 600)
 
   def draw_circle(app, color, size)
     r = size/2
@@ -12,5 +11,7 @@ Shoes.app :width => 600, :height => 600 do
     app.oval app.width/2 - r, 0, size, size
     draw_circle(app, color - 0.04, 3*size/4) if (color > 0.4)
   end
+
+  draw_circle(self, 0.9, 600)
 end
 
